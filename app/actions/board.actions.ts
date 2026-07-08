@@ -39,16 +39,13 @@ export async function deleteBoard(id: string) {
 }
 
 
+export async function loadBoardDocument(boardId: string) {
+  return BoardService.getDocument(boardId);
+}
+
 export async function saveBoardDocument(
   boardId: string,
   document: unknown
 ) {
   await BoardService.saveDocument(boardId, document);
-}
-
-
-export async function loadBoardDocument(
-  boardId: string
-) {
-  return await BoardService.loadDocument(boardId);
 }

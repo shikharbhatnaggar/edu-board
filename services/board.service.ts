@@ -27,6 +27,10 @@ export class BoardService {
     return repository.getDocument(id);
   }
 
+  static async getDocument(id: string) {
+    return repository.getDocument(id);
+  }
+
   static async saveDocument(id: string, document: unknown) {
     return repository.saveDocument(id, document);
   }

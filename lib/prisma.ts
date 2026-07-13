@@ -8,6 +8,12 @@ export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
     log: ["query", "error", "warn"],
+    // 💡 FORCE Prisma to read the runtime system string explicitly 
+    datasources: {
+      db: {
+        url: process.env.DATABASE_URL, 
+      },
+    },
   });
 
 if (process.env.NODE_ENV !== "production") {

@@ -4,6 +4,7 @@ CREATE TABLE `Board` (
     `title` VARCHAR(191) NOT NULL,
     `description` VARCHAR(191) NULL,
     `thumbnail` VARCHAR(191) NULL,
+    `document` TEXT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 

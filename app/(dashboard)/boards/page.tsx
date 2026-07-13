@@ -4,6 +4,8 @@ import BoardCard from "@/components/board/board-card";
 import NewBoardDialog from "@/components/board/new-board-dialog";
 import { BoardService } from "@/services/board.service";
 
+export const dynamic = "force-dynamic";
+
 export default async function BoardsPage() {
   const boards = await BoardService.getBoards();
   

@@ -22,9 +22,9 @@ export default function Canvas({ boardId }: CanvasProps) {
 
     void loadBoard(editor);
 
-    editor.store.listen(() => {
-        scheduleSave();
-    });
+    // editor.store.listen(() => {
+    //     scheduleSave();
+    // });
   }
 
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);

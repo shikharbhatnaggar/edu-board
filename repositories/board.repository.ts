@@ -1,4 +1,5 @@
 import { db } from "@/lib/db";
+import { Prisma } from "@prisma/client"; // 1. Import Prisma
 
 export class BoardRepository {
   async findAll() {
@@ -49,7 +50,7 @@ export class BoardRepository {
     return db.board.update({
       where: { id },
       data: {
-        document,
+        document: document as Prisma.InputJsonValue,
       },
     });
   }
